@@ -1,7 +1,11 @@
 # powerbi-tom-databricks
 Programming the Power BI Table Object Model to connect to Databricks tables and automate the generation of a tabular model.
 
-This demo uses the Azure Databricks [TPC-H sample dataset](https://learn.microsoft.com/en-us/azure/databricks/dbfs/databricks-datasets). The dataset is available out of the box in Databricks.
+This demo uses the Azure Databricks [TPC-H sample dataset](https://learn.microsoft.com/azure/databricks/dbfs/databricks-datasets). The dataset is available out of the box in Databricks.
+
+The program uses a file [datamodel.json](GenerateDatabricksTOM/datamodel.json) in a custom format, containing the definition of the tabular model (tables, columns and relationships) and its mapping to Databricks tables and columns.
+
+Note: In the TPC-H dataset, the relationship from `lineitem` to `partsupp` is a foreign key over two columns. As the tabular model only supports single column relationships, only the first column is used (`partkey`).
 
 ## Prerequisites
 
@@ -36,7 +40,7 @@ In Power BI Desktop:
 
    ![Power BI Toolbar](docs/powerbi-toolbar.png)
 
-   This populates the model and relationships from [datamodel.json](datamodel.json).
+   This populates the model and relationships from [datamodel.json](GenerateDatabricksTOM/datamodel.json).
 
    ![tabular-model](docs/tabular-model.png)
 
