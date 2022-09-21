@@ -53,7 +53,7 @@ namespace GenerateDatabricksTOM
                             Mode = ModeType.DirectQuery,
                             Source = new MPartitionSource
                             {
-                                // M code for query maintained in separate source file
+                                // M code for query
                                 Expression =
                                     $@"let
     Source = Databricks.Catalogs(""{databricksServer}"", ""{httpPath}"", [Catalog=null, Database=null, EnableAutomaticProxyDiscovery=null]),
