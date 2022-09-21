@@ -28,7 +28,9 @@ Restart Power BI Desktop if it's already open.
 
 In Power BI Desktop:
 
-1. Click Home -> Enter Data and enter some random data, then click Load. This step serves no purpose, but is required as otherwise the next step fails with an error:![empty-model-error](/Users/algattik/GitHub/powerbi-tom-databricks/docs/empty-model-error.png)
+1. Click Home -> Enter Data and enter some random data, then click Load. This step serves no purpose, but is required as otherwise the next step fails with an error:
+
+   ![empty-model-error](docs/empty-model-error.png)
 
 2. click External Tools -> Model Generator:
 
@@ -36,13 +38,13 @@ In Power BI Desktop:
 
    This populates the model and relationships from [datamodel.json](datamodel.json).
 
-   ![tabular-model](/Users/algattik/GitHub/powerbi-tom-databricks/docs/tabular-model.png)
+   ![tabular-model](docs/tabular-model.png)
 
 3. When prompted for Databricks credentials, select Azure Active Directory.
 
 4. You can now use the data in report visuals:
 
-   ![powerbi-map](/Users/algattik/GitHub/powerbi-tom-databricks/docs/powerbi-map.png)
+   ![powerbi-map](docs/powerbi-map.png)
 
 ## References
 
