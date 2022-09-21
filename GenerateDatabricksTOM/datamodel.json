@@ -1,0 +1,439 @@
+{
+  "Tables": [
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Customers",
+      "SourceTable": "customer",
+      "Columns": [
+        {
+          "Name": "Customer ID",
+          "DataType": "Int64",
+          "SourceColumn": "c_custkey"
+        },
+        {
+          "Name": "Name",
+          "DataType": "String",
+          "SourceColumn": "c_name"
+        },
+        {
+          "Name": "Address",
+          "DataType": "String",
+          "SourceColumn": "c_address"
+        },
+        {
+          "Name": "Nation ID",
+          "DataType": "Int64",
+          "SourceColumn": "c_nationkey"
+        },
+        {
+          "Name": "Phone",
+          "DataType": "String",
+          "SourceColumn": "c_phone"
+        },
+        {
+          "Name": "Account Balance",
+          "DataType": "Double",
+          "SourceColumn": "c_acctbal"
+        },
+        {
+          "Name": "Market Segment",
+          "DataType": "String",
+          "SourceColumn": "c_mktsegment"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "c_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Line items",
+      "SourceTable": "lineitem",
+      "Columns": [
+        {
+          "Name": "Order ID",
+          "DataType": "Int64",
+          "SourceColumn": "l_orderkey"
+        },
+        {
+          "Name": "Part ID",
+          "DataType": "Int64",
+          "SourceColumn": "l_partkey"
+        },
+        {
+          "Name": "Supplier ID",
+          "DataType": "Int64",
+          "SourceColumn": "l_suppkey"
+        },
+        {
+          "Name": "Line number",
+          "DataType": "Int64",
+          "SourceColumn": "l_linenumber"
+        },
+        {
+          "Name": "Quantity",
+          "DataType": "Double",
+          "SourceColumn": "l_quantity"
+        },
+        {
+          "Name": "Extended Price",
+          "DataType": "Double",
+          "SourceColumn": "l_extendedprice"
+        },
+        {
+          "Name": "Discount",
+          "DataType": "Double",
+          "SourceColumn": "l_discount"
+        },
+        {
+          "Name": "Tax",
+          "DataType": "Double",
+          "SourceColumn": "l_tax"
+        },
+        {
+          "Name": "Return Flag",
+          "DataType": "String",
+          "SourceColumn": "l_returnflag"
+        },
+        {
+          "Name": "Line Status",
+          "DataType": "String",
+          "SourceColumn": "l_linestatus"
+        },
+        {
+          "Name": "Ship Date",
+          "DataType": "DateTime",
+          "SourceColumn": "l_shipdate"
+        },
+        {
+          "Name": "Commit Date",
+          "DataType": "DateTime",
+          "SourceColumn": "l_commitdate"
+        },
+        {
+          "Name": "Receipt Date",
+          "DataType": "DateTime",
+          "SourceColumn": "l_receiptdate"
+        },
+        {
+          "Name": "Shipping Instructions",
+          "DataType": "String",
+          "SourceColumn": "l_shipinstruct"
+        },
+        {
+          "Name": "Shipping Mode",
+          "DataType": "String",
+          "SourceColumn": "l_shipmode"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "l_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Orders",
+      "SourceTable": "orders",
+      "Columns": [
+        {
+          "Name": "Order ID",
+          "DataType": "Int64",
+          "SourceColumn": "o_orderkey"
+        },
+        {
+          "Name": "Customer ID",
+          "DataType": "Int64",
+          "SourceColumn": "o_custkey"
+        },
+        {
+          "Name": "Order Status",
+          "DataType": "String",
+          "SourceColumn": "o_orderstatus"
+        },
+        {
+          "Name": "Total Price",
+          "DataType": "Double",
+          "SourceColumn": "o_totalprice"
+        },
+        {
+          "Name": "Order Date",
+          "DataType": "DateTime",
+          "SourceColumn": "o_orderdate"
+        },
+        {
+          "Name": "Order Priority",
+          "DataType": "String",
+          "SourceColumn": "o_orderpriority"
+        },
+        {
+          "Name": "Clerk",
+          "DataType": "String",
+          "SourceColumn": "o_clerk"
+        },
+        {
+          "Name": "Shipping Priority",
+          "DataType": "Int64",
+          "SourceColumn": "o_shippriority"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "o_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Nations",
+      "SourceTable": "nation",
+      "Columns": [
+        {
+          "Name": "Nation ID",
+          "DataType": "Int64",
+          "SourceColumn": "n_nationkey"
+        },
+        {
+          "Name": "Name",
+          "DataType": "String",
+          "SourceColumn": "n_name"
+        },
+        {
+          "Name": "Region ID",
+          "DataType": "Int64",
+          "SourceColumn": "n_regionkey"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "n_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Parts",
+      "SourceTable": "part",
+      "Columns": [
+        {
+          "Name": "Part ID",
+          "DataType": "Int64",
+          "SourceColumn": "p_partkey"
+        },
+        {
+          "Name": "Name",
+          "DataType": "String",
+          "SourceColumn": "p_name"
+        },
+        {
+          "Name": "Manufacturer",
+          "DataType": "String",
+          "SourceColumn": "p_mfgr"
+        },
+        {
+          "Name": "Brand",
+          "DataType": "String",
+          "SourceColumn": "p_brand"
+        },
+        {
+          "Name": "Type",
+          "DataType": "String",
+          "SourceColumn": "p_type"
+        },
+        {
+          "Name": "Size",
+          "DataType": "Int64",
+          "SourceColumn": "p_size"
+        },
+        {
+          "Name": "Container",
+          "DataType": "String",
+          "SourceColumn": "p_container"
+        },
+        {
+          "Name": "Retail Price",
+          "DataType": "Double",
+          "SourceColumn": "p_retailprice"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "p_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Part suppliers",
+      "SourceTable": "partsupp",
+      "Columns": [
+        {
+          "Name": "Part ID",
+          "DataType": "Int64",
+          "SourceColumn": "ps_partkey"
+        },
+        {
+          "Name": "Supplier ID",
+          "DataType": "Int64",
+          "SourceColumn": "ps_suppkey"
+        },
+        {
+          "Name": "Available Quantity",
+          "DataType": "Int64",
+          "SourceColumn": "ps_availqty"
+        },
+        {
+          "Name": "Supply Cost",
+          "DataType": "Double",
+          "SourceColumn": "ps_supplycost"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "ps_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Suppliers",
+      "SourceTable": "supplier",
+      "Columns": [
+        {
+          "Name": "Supplier ID",
+          "DataType": "Int64",
+          "SourceColumn": "s_suppkey"
+        },
+        {
+          "Name": "Name",
+          "DataType": "String",
+          "SourceColumn": "s_name"
+        },
+        {
+          "Name": "Address",
+          "DataType": "String",
+          "SourceColumn": "s_address"
+        },
+        {
+          "Name": "Nation ID",
+          "DataType": "Int64",
+          "SourceColumn": "s_nationkey"
+        },
+        {
+          "Name": "Phone",
+          "DataType": "String",
+          "SourceColumn": "s_phone"
+        },
+        {
+          "Name": "Account Balance",
+          "DataType": "Double",
+          "SourceColumn": "s_acctbal"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "s_comment"
+        }
+      ]
+    },
+    {
+      "Database": "samples",
+      "Schema": "tpch",
+      "Name": "Regions",
+      "SourceTable": "region",
+      "Columns": [
+        {
+          "Name": "Region ID",
+          "DataType": "Int64",
+          "SourceColumn": "r_regionkey"
+        },
+        {
+          "Name": "Name",
+          "DataType": "String",
+          "SourceColumn": "r_name"
+        },
+        {
+          "Name": "Comment",
+          "DataType": "String",
+          "SourceColumn": "r_comment"
+        }
+      ]
+    }
+  ],
+  "Relationships": [
+    {
+      "FromTable": "Nations",
+      "FromColumn": "Region ID",
+      "FromCardinality": "One",
+      "ToTable": "Regions",
+      "ToColumn": "Region ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Suppliers",
+      "FromColumn": "Nation ID",
+      "FromCardinality": "One",
+      "ToTable": "Nations",
+      "ToColumn": "Nation ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Customers",
+      "FromColumn": "Nation ID",
+      "FromCardinality": "One",
+      "ToTable": "Nations",
+      "ToColumn": "Nation ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Part suppliers",
+      "FromColumn": "Supplier ID",
+      "FromCardinality": "One",
+      "ToTable": "Suppliers",
+      "ToColumn": "Supplier ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Part suppliers",
+      "FromColumn": "Part ID",
+      "FromCardinality": "One",
+      "ToTable": "Parts",
+      "ToColumn": "Part ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Orders",
+      "FromColumn": "Customer ID",
+      "FromCardinality": "One",
+      "ToTable": "Customers",
+      "ToColumn": "Customer ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Line items",
+      "FromColumn": "Order ID",
+      "FromCardinality": "One",
+      "ToTable": "Orders",
+      "ToColumn": "Order ID",
+      "ToCardinality": "Many"
+    },
+    {
+      "FromTable": "Line items",
+      "FromColumn": "Part ID",
+      "FromCardinality": "Many",
+      "ToTable": "Part suppliers",
+      "ToColumn": "Part ID",
+      "ToCardinality": "Many"
+    }
+  ]
+}
