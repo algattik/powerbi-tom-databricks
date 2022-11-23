@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
 using Microsoft.AnalysisServices.Tabular;
 using Newtonsoft.Json;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
@@ -33,7 +30,20 @@ namespace GenerateDatabricksTOM
                 Console.WriteLine(database.Name);
             }
 
-            var model = server.Databases.FindByName(databaseName).Model;
+            var db = server.Databases.FindByName(databaseName);
+            if (db is null)
+            {
+                // Attempt creating a new Database, but model.SaveChanges() fails in this case later on
+                // see https://community.powerbi.com/t5/Service/Can-I-create-Dataset-using-XMLA-Endpoint/m-p/2310718
+                db = new Database
+                {
+                    Name = databaseName,
+                    Model = new Model { }
+                };
+                server.Databases.Add(db);
+            }
+
+            var model = db.Model;
 
             var modelDefinition = ReadModelDefinitionFile(modelDefinitionFile);
 
@@ -102,18 +112,8 @@ in
             var serializer = new JsonSerializer();
             using var sr = new StreamReader(modelDefinitionFile);
             using var jsonTextReader = new JsonTextReader(sr);
-            return serializer.Deserialize<ModelDefinition>(jsonTextReader).NotNull("Error reading model definition file");
-        }
-
-
-        private static T NotNull<T>(this T? instance, string message)
-        {
-            if (instance is null)
-            {
-                throw new NullReferenceException(message);
-            }
-
-            return instance;
+            return serializer.Deserialize<ModelDefinition>(jsonTextReader)
+                ?? throw new NullReferenceException("Error reading model definition file");
         }
     }
 
