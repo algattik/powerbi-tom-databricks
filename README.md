@@ -30,7 +30,7 @@ The images below compare the `partsupp` table in Databricks and Power BI:
 
 The code project (`GenerateDatabricksTOM` ) uses the [Analysis Management Objects (AMO)](https://learn.microsoft.com/en-us/analysis-services/amo/amo-concepts-and-object-model) .NET Core client library to connect to a tabular server and modify the [Tabular Object Model (TOM)](https://learn.microsoft.com/en-us/analysis-services/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo) definition. The same executable can be used:
 
-- As a client to the [Power BI Online Service XML for Analysis (XMLA)  endpoint](https://learn.microsoft.com/en-gb/power-bi/enterprise/service-premium-connect-tools), modifying a Power BI.
+- As a client to the [Power BI Online Service XML for Analysis (XMLA)  endpoint](https://learn.microsoft.com/en-gb/power-bi/enterprise/service-premium-connect-tools), modifying an online Power BI dataset.
 - As a [Power BI Desktop external tool](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-external-tools-register), acting as a client to Power BI Desktop's embedded Analysis Services Tabular server.
 
 The program reads a JSON file containing the detailed schema of the tabular data to be loaded, its columns and mapping to the Databricks tables source, and relationships to be created between tables. It connects to the Tabular server and modifies the model according the JSON file.
@@ -68,13 +68,19 @@ In the online service, navigate to your Dataset. Note that the pane on the right
 
 ⚠️ The option *File → Download this file* is [disabled](https://learn.microsoft.com/en-us/power-bi/create-reports/service-export-to-pbix#limitations-when-downloading-a-dataset-pbix-file) *(You can't download this file because the dataset was altered through XMLA endpoint)*.
 
-Use the option  *Create a report → Start from scratch* to create a report interactively.  ⚠️ Note that the option *File → Download this file* is also disabled in the report.
+Use the option *Create a report → Start from scratch* to create a report interactively.
+
+ ⚠️ Note that the option *File → Download this file* is also disabled in the report.
 
 ##### Connecting to the Dataset using Power BI Desktop
 
 In Power BI Desktop, [connect to your Dataset](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-report-lifecycle-datasets) and create a report.
 
-⚠️ Note that the option to modify the model is disabled.
+![powerbi-report](powerbi-report.png)
+
+⚠️ Note that options to modify the model (*Transform data* as well as editing relationships in Model view) are disabled.
+
+![powerbi-transform-data-disabled](powerbi-transform-data-disabled.png)
 
 #### Issues
 
@@ -82,7 +88,7 @@ In Power BI Desktop, [connect to your Dataset](https://learn.microsoft.com/en-us
 
 #### Conclusions
 
-This approach usable for quickly viewing the data, but the user cannot transform the data to reach additional insights. 
+This approach usable for quickly viewing the data, but the user cannot transform the data to reach additional insights.
 
 ## Server programming with Power BI Desktop
 
