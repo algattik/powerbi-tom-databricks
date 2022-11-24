@@ -21,7 +21,7 @@ The program uses a file [datamodel.json](GenerateDatabricksTOM/datamodel.json) i
 
 Note: In the TPC-H dataset, the relationship from `lineitem` to `partsupp` is a foreign key over two columns. As the tabular model only supports single column relationships, only the first column is used (`partkey`).
 
-The images below compare the `partsupp` table in Databricks and Power BI:
+The images below compare the `partsupp` table in Databricks and Power BI Desktop:
 
 | ![partsupp-databricks](docs/partsupp-databricks.png) | ![partsupp-powerbi](docs/partsupp-powerbi.png) |
 | ---------------------------------------------------- | ---------------------------------------------- |
